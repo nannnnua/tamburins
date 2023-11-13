@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border;
+        }
+
+        .portfolio{
+            width: 100%;
+            display: none;
+        }
+        
+        /* min width : ~까지 보여준다.
+        max width : ~부터 보여준다. */
+
+        @media screen and (min-width: 1024px){
+            .portfolio.pc {
+                display: block;
+            }
+        }
+        @media screen and (min-width: 769px) and (max-width: 1023px){
+            .portfolio.tablet {
+                display: block;
+             }
+        }
+
+        @media screen and (max-width: 768px){
+            .portfolio.mobile {
+                display: block;
+             }
+        }
+
+    </style>
+
+    <main>
+        <img class="portfolio pc" src="./images/pc.png"/>
+        <img class="portfolio tablet" src="./images/tablet.png"/>
+        <img class="portfolio mobile" src="./images/mobile.png"/>
+    </main>
+</body>
+</html>
